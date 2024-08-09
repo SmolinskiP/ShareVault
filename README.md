@@ -23,3 +23,32 @@ To get started with ShareVault, follow these steps:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/sharevault.git
+2. **Navigate to the project directory:**
+   ```bash
+   cd sharevault
+3. **Create and activate a virtual environment:**
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+4. ****
+   ```bash
+   pip install -r requirements.txt
+5. ****
+   ```bash
+   python manage.py migrate
+6. ****
+   ```bash
+   python manage.py runserver
+
+## Configuration
+Time Zone: Ensure the time zone in settings.py is set for accurate time management.
+Database: Configure the database connection in settings.py using the appropriate credentials and settings.
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contributing
+Contributions are welcome! Please fork this repository and submit a pull request for any enhancements, bug fixes, or improvements.
+
+## Contact
+For any inquiries or issues, please open a GitHub issue or contact me directly at [smolinski.patryk@mensa.org.pl].
