@@ -14,8 +14,6 @@
 
 - **Multi-language Support**: ShareVault supports multiple languages, including full support for Polish, making it accessible to a broader audience.
 
-- **Progress Tracking**: A progress bar is displayed during file uploads, providing users with real-time feedback on the status of their upload.
-
 ## Installation
 
 To get started with ShareVault, follow these steps:
