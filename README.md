@@ -45,7 +45,7 @@ Time Zone: Ensure the time zone in settings.py is set for accurate time manageme
 Database: Configure the database connection in settings.py using the appropriate credentials and settings.
 
 ## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for any enhancements, bug fixes, or improvements.
