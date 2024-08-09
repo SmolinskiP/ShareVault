@@ -30,13 +30,13 @@ To get started with ShareVault, follow these steps:
    ```bash
    python3 -m venv venv
    source venv/bin/activate
-4. ****
+4. **Install the required dependencies:**
    ```bash
    pip install -r requirements.txt
-5. ****
+5. **Apply the database migrations:**
    ```bash
    python manage.py migrate
-6. ****
+6. **Run the development server:**
    ```bash
    python manage.py runserver
 
