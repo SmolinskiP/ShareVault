@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h2>Your Files</h2>
+  <ul>
+    {% for file in files %}
+      <li>{{ file.filename }} (Expires: {{ file.expiration_date }})</li>
+    {% endfor %}
+  </ul>
+  <a href="{% url 'upload_file' %}">Upload new file</a>
+{% endblock %}
+

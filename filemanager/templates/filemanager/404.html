@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nie znaleziono strony</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: "Arial", sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 80px;
+            margin: 20px 0;
+        }
+        p {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #1e90ff;
+            font-size: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo">
+        <h1>404</h1>
+        <p>Oops! Strona, której szukasz, nie istnieje.<br>Jeśli to jakiś problem, na pewno został do niego oddelegowany zespół świetnie przeszkolonych małp.</p>
+        <img src="{% static 'images/monkey.png' %}" alt="Monkey with a shovel">
+        <p><a href="/">Go back to Home</a></p>
+    </div>
+</body>
+</html>
+
