@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload File</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Upload File</h1>
+    <form id="uploadForm" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+    <progress id="progressBar" value="0" max="100" style="width:300px;"></progress>
+    <h3 id="status"></h3>
+    <p id="loaded_n_total"></p>
+
+    <script>
+        $(document).ready(function() {
+            $('#uploadForm').on('submit', function(e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+                $.ajax({
+                    xhr: function() {
+                        var xhr = new window.XMLHttpRequest();
+                        xhr.upload.addEventListener("progress", function(evt) {
+                            if (evt.lengthComputable) {
+                                var percentComplete = (evt.loaded / evt.total) * 100;
+                                $('#progressBar').val(percentComplete);
+                                $('#status').html(Math.round(percentComplete) + '% uploaded');
+                            }
+                        }, false);
+                        return xhr;
+                    },
+                    url: '{% url "upload_file" %}',
+                    type: 'POST',
+                    data: formData,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        $('#status').html('File uploaded successfully!');
+                        $('#progressBar').val(0);
+                    },
+                    error: function(response) {
+                        $('#status').html('Error uploading file.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
